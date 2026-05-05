@@ -1,0 +1,82 @@
+.weather-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  font-family: Arial, sans-serif;
+}
+
+.weather-title {
+  text-align: center;
+  color: #333;
+}
+
+.weather-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-input {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.btn-search {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.btn-refresh {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.status-text {
+  text-align: center;
+  font-style: italic;
+}
+
+.error-text {
+  color: red;
+}
+
+.weather-card {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.current-weather {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.hourly-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.hourly-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
