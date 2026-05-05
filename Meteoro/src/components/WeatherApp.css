@@ -1,10 +1,11 @@
 .weather-container {
-  max-width: 500px;
+  max-width: 600px;
   margin: 2rem auto;
   font-family: Arial, sans-serif;
 }
 
 .weather-title {
+  padding-top: 20px;
   text-align: center;
   color: #333;
 }
