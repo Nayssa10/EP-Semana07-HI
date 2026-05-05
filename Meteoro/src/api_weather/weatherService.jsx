@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const API_BASE_URL = 'https://api.open-meteo.com/v1/forecast';
+//Generando conflicto 2
 
 export const fetchWeather = async (lat, lon) => {
   try {

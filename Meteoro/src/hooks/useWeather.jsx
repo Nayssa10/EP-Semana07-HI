@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { fetchWeather } from "../api_weather/weatherService";
+// GENERANDO EL CONFLICTO
 
 export const useWeather = (lat, lon) => {
   const [weatherData, setWeatherData] = useState(null);
