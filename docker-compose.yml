@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  db:
+    build:
+      context: ./DB
+    container_name: sql_server_db
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=YourStrong@Pass123
+    ports:
+      - "1433:1433"
+    healthcheck:
+      # Use sqlcmd utility inside SQL Server 2022 to verify server availability.
+      # -C is required in version 2022 to trust the server certificate during local connection.
+      test: ["CMD", "/opt/mssql-tools18/bin/sqlcmd", "-C", "-S", "localhost", "-U", "sa", "-P", "YourStrong@Pass123", "-Q", "SELECT 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: always
+
+  backend:
+    build:
+      context: ./NodeBack
+    container_name: node_backend
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - DB_USER=sa
+      - DB_PASSWORD=YourStrong@Pass123
+      - DB_HOST=db
+      - DB_PORT=1433
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: always
+
+  frontend:
+    build:
+      context: ./Meteoro
+    container_name: react_frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: always
