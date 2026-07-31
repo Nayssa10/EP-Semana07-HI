@@ -1,0 +1,43 @@
+[
+  {
+    "idCurso": "100000I62N",
+    "nombreCurso": "Inteligencia de negocios",
+    "colorBase": "#4F46E5",
+    "secciones": [
+      {
+        "idSeccion": "26369",
+        "docente": "Davila Hurtado, Luis Alberto",
+        "modalidad": "Presencial",
+        "sesiones": [
+          { "dia": "Martes", "horaInicio": "10:15", "horaFin": "11:45" },
+          { "dia": "Sábado", "horaInicio": "09:45", "horaFin": "11:15" }
+        ]
+      },
+      {
+        "idSeccion": "26370",
+        "docente": "Perez Jimenez, Juan",
+        "modalidad": "Remoto",
+        "sesiones": [
+          { "dia": "Lunes", "horaInicio": "08:00", "horaFin": "09:30" },
+          { "dia": "Miércoles", "horaInicio": "08:00", "horaFin": "09:30" }
+        ]
+      }
+    ]
+  },
+  {
+    "idCurso": "100000I65N",
+    "nombreCurso": "Arquitectura de Software",
+    "colorBase": "#10B981",
+    "secciones": [
+      {
+        "idSeccion": "27001",
+        "docente": "Gomez Ramirez, Ana",
+        "modalidad": "Presencial",
+        "sesiones": [
+          { "dia": "Martes", "horaInicio": "10:00", "horaFin": "12:00" },
+          { "dia": "Viernes", "horaInicio": "10:00", "horaFin": "12:00" }
+        ]
+      }
+    ]
+  }
+]
